@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="petik">#2b2974</color>
     <color name="grey">#7e7e7e</color>
+    <color name="primaryColor">#2b2974</color>
 </resources>
