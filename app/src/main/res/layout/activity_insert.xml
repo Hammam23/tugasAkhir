@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".InsertActivity">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/DatePickerButtom"
+            style="?android:spinnerStyle"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:onClick="openDatePicker"
+            android:text="JAN 01 2024"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+        <CheckBox
+            android:id="@+id/cb_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DatePickerButtom"
+            android:layout_marginTop="15dp"
+            android:minHeight="48dp"
+            android:text="Lantai bersih dan tidak berdebu" />
+
+        <CheckBox
+            android:id="@+id/cb_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/cb_1"
+            android:minHeight="48dp"
+            android:text="Tidak ada pakaian dan handuk\n diatas kasur" />
+
+        <CheckBox
+            android:id="@+id/cb_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/cb_2"
+            android:minHeight="48dp"
+            android:text="Jendela dan pintu bersih dan\n tidak berdebu" />
+
+        <CheckBox
+            android:id="@+id/cb_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/cb_3"
+            android:minHeight="48dp"
+            android:text="Kamar dalam keadaan rapi dan bersih" />
+
+        <CheckBox
+            android:id="@+id/cb_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/cb_4"
+            android:minHeight="48dp"
+            android:text="Tidak ada kasur disimpan dibawah" />
+
+        <CheckBox
+            android:id="@+id/cb_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/cb_5"
+            android:minHeight="48dp"
+            android:text="Alat makan dan mandi disimpan\n pada tempatnya" />
+
+        <CheckBox
+            android:id="@+id/cb_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/cb_6"
+            android:minHeight="48dp"
+            android:text="Pakaian tidak bergantungan\n sembarangan" />
+
+        <CheckBox
+            android:id="@+id/cb_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/cb_7"
+            android:minHeight="48dp"
+            android:text="Toilet kamar bersih tidak berlumut" />
+
+        <EditText
+            android:id="@+id/edt_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cb_8"
+            android:layout_marginTop="30dp"
+            android:hint="Komentar"
+            android:text=""/>
+
+        <Button
+            android:id="@+id/btnSV"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_1"
+            android:layout_marginTop="10dp"
+            android:background="@color/petik"
+            android:layout_marginLeft="140dp"
+            android:onClick="onClick"
+            android:text="Simpan"
+            android:textAllCaps="false" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

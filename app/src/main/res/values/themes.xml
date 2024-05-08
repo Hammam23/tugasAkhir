@@ -2,7 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.KeTIK" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="colorPrimary">@color/petik</item>
+
     </style>
 
     <style name="Theme.KeTIK" parent="Base.Theme.KeTIK" />

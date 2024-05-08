@@ -7,10 +7,210 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/background"
+
+    <FrameLayout
+        android:id="@+id/fr_container"
         android:layout_width="match_parent"
-        android:layout_height="185dp"
-        android:src="@drawable/background" />
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:clipToPadding="false"
+        android:background="@drawable/backgroud_atas"
+        android:layout_alignParentTop="true"
+        android:elevation="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/logo"/>
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src=""/>-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="280dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main"
+        android:layout_marginTop="-7dp">
+
+    <RelativeLayout
+        android:id="@+id/main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/layout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/background"
+                android:layout_width="2000dp"
+                android:layout_height="185dp"
+                android:layout_below="@id/main"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/background"/>
+        </LinearLayout>
+        
+        <RelativeLayout
+            android:id="@+id/layout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_main"
+            android:layout_marginTop="-15dp"
+            android:layout_below="@id/layout4">
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:layout_marginTop="18dp"
+                android:text="Welcome, "
+                android:layout_marginLeft="25dp"/>
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/txt1"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:layout_marginTop="18dp"
+                android:text="gbhvhb"/>
+
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu"
+                android:textSize="25dp"
+                android:layout_below="@id/txt1"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/petik"
+                android:layout_marginLeft="45dp"/>
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_below="@id/txt2"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_kamar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt2"
+                    android:layout_weight="8"
+                    android:src="@drawable/kamar"/>
+
+                <ImageView
+                    android:id="@+id/img_harian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt2"
+                    android:layout_weight="8"
+                    android:src="@drawable/harian" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout1"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Kamar"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="@color/petik"
+                    android:layout_weight="8"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Harian"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:textColor="@color/petik"
+                    android:layout_weight="8"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout2"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/petik"
+                android:text="Tentang PeTIK" />
+            <LinearLayout
+                android:id="@+id/layout3"
+                android:layout_width="368dp"
+                android:layout_height="270dp"
+                android:layout_below="@id/txt3"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_gopay"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="183dp"
+                    android:src="@drawable/img" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Acara Wisuda dan Tasyakuran Mahasantri Petik Angkatan 9 Tahun Akademik 2021/2022✨"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
+
