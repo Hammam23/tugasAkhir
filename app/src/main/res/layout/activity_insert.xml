@@ -14,7 +14,7 @@
         android:layout_gravity="center">
 
         <Button
-            android:id="@+id/DatePickerButtom"
+            android:id="@+id/DatePickerButton"
             style="?android:spinnerStyle"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
@@ -33,9 +33,10 @@
             android:id="@+id/cb_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/DatePickerButtom"
+            android:layout_below="@id/DatePickerButton"
             android:layout_marginTop="15dp"
             android:minHeight="48dp"
+            android:checked="false"
             android:text="Lantai bersih dan tidak berdebu" />
 
         <CheckBox
@@ -45,6 +46,7 @@
             android:layout_marginTop="15dp"
             android:layout_below="@id/cb_1"
             android:minHeight="48dp"
+            android:checked="false"
             android:text="Tidak ada pakaian dan handuk\n diatas kasur" />
 
         <CheckBox
@@ -54,6 +56,7 @@
             android:layout_marginTop="15dp"
             android:layout_below="@id/cb_2"
             android:minHeight="48dp"
+            android:checked="false"
             android:text="Jendela dan pintu bersih dan\n tidak berdebu" />
 
         <CheckBox
@@ -63,6 +66,7 @@
             android:layout_marginTop="15dp"
             android:layout_below="@id/cb_3"
             android:minHeight="48dp"
+            android:checked="false"
             android:text="Kamar dalam keadaan rapi dan bersih" />
 
         <CheckBox
@@ -72,6 +76,7 @@
             android:layout_marginTop="15dp"
             android:layout_below="@id/cb_4"
             android:minHeight="48dp"
+            android:checked="false"
             android:text="Tidak ada kasur disimpan dibawah" />
 
         <CheckBox
@@ -81,6 +86,7 @@
             android:layout_marginTop="15dp"
             android:layout_below="@id/cb_5"
             android:minHeight="48dp"
+            android:checked="false"
             android:text="Alat makan dan mandi disimpan\n pada tempatnya" />
 
         <CheckBox
@@ -90,6 +96,7 @@
             android:layout_marginTop="15dp"
             android:layout_below="@id/cb_6"
             android:minHeight="48dp"
+            android:checked="false"
             android:text="Pakaian tidak bergantungan\n sembarangan" />
 
         <CheckBox
@@ -99,23 +106,15 @@
             android:layout_marginTop="15dp"
             android:layout_below="@id/cb_7"
             android:minHeight="48dp"
+            android:checked="false"
             android:text="Toilet kamar bersih tidak berlumut" />
 
-        <EditText
-            android:id="@+id/edt_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/cb_8"
-            android:layout_marginTop="30dp"
-            android:hint="Komentar"
-            android:text=""/>
-
         <Button
-            android:id="@+id/btnSV"
+            android:id="@+id/btn_save"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/edt_1"
-            android:layout_marginTop="10dp"
+            android:layout_below="@id/cb_8"
+            android:layout_marginTop="15dp"
             android:background="@color/petik"
             android:layout_marginLeft="140dp"
             android:onClick="onClick"

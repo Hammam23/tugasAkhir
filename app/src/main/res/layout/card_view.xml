@@ -7,4 +7,19 @@
     app:cardElevation="3dp"
     app:cardUseCompatPadding="true">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/txt_kamar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
 </androidx.cardview.widget.CardView>
