@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -72,5 +73,10 @@ public class MenuKamar extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
-
+    @SuppressLint("MissingSuperCall")
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(MenuKamar.this, MainActivity.class);
+        startActivity(intent);
+    }
 }

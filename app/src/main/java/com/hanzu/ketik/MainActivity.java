@@ -12,10 +12,13 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView imageKamar, imageHarian;
     LinearLayout layout3;
+//    private int intLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        intLayout = 1;//test back press
 
         imageKamar = (ImageView) findViewById(R.id.img_kamar);
         imageHarian = (ImageView) findViewById(R.id.img_harian);
