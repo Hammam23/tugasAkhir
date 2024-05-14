@@ -4,6 +4,14 @@ import com.google.gson.annotations.SerializedName;
 
 public class Result {
 
-    @SerializedName("kamar")
-    private String kamar;
+    @SerializedName("username")
+    private String username;
+
+    public Result(String username){
+        this.username = username;
+    }
+
+    public String getUsername() {
+        return username;
+    }
 }

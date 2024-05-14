@@ -17,12 +17,12 @@ public class MenuHarian extends AppCompatActivity {
 
         input = (Button) findViewById(R.id.btn_harian);
 
-        input.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MenuHarian.this, InsertActivity.class);
-                startActivity(intent);
-            }
-        });
+//        input.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MenuHarian.this, InsertActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }

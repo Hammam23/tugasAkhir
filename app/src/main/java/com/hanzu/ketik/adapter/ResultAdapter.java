@@ -3,13 +3,13 @@ package com.hanzu.ketik.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hanzu.ketik.R;
 import com.hanzu.ketik.model.Result;
-
 import java.util.ArrayList;
 
 public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ResultViewHolder> {
@@ -29,7 +29,7 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ResultView
 
     @Override
     public void onBindViewHolder(@NonNull ResultAdapter.ResultViewHolder holder, int position) {
-
+        holder.txtKamar.setText(datalist.get(position).getUsername());
     }
 
     @Override
@@ -39,8 +39,11 @@ public class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ResultView
 
     public class ResultViewHolder extends RecyclerView.ViewHolder{
 
+        TextView txtKamar;
+
         public ResultViewHolder(@NonNull View itemView) {
             super(itemView);
+            txtKamar = (TextView) itemView.findViewById(R.id.txt_kamar);
         }
     }
 }

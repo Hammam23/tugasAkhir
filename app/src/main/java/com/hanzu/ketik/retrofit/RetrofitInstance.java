@@ -7,7 +7,7 @@ public class RetrofitInstance {
 
     private static Retrofit retrofit;
 
-    private static final String BASE_URL = "http://terlallulama.000webhostapp.com/login/";
+    private static final String BASE_URL = "http://terlallulama.000webhostapp.com/";
 
     public static Retrofit getRetrofit(){
         if (retrofit == null){
