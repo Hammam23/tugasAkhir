@@ -2,6 +2,7 @@ package com.hanzu.ketik;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,12 +18,18 @@ public class MenuHarian extends AppCompatActivity {
 
         input = (Button) findViewById(R.id.btn_harian);
 
-//        input.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MenuHarian.this, InsertActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        input.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuHarian.this, InsertHarian.class);
+                startActivity(intent);
+            }
+        });
+    }
+    @SuppressLint("MissingSuperCall")
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(MenuHarian.this, MainActivity.class);
+        startActivity(intent);
     }
 }

@@ -40,23 +40,33 @@
 
     <include layout="@layout/content_main"
         android:id="@+id/include"
-        android:layout_below="@id/judul"
+        android:layout_below="@id/ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         />
 
-    <TextView
-        android:id="@+id/judul"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/main2"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/petik"
-        android:text="Absensi Kebersihan Kamar"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"/>
+        android:layout_below="@id/main2">
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main2"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/petik"
+            android:text="Absensi Kebersihan Kamar"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            />
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/btn_kamar"

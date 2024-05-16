@@ -8,92 +8,32 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.DatePicker;
-import android.widget.Toast;
-
-import com.hanzu.ketik.retrofit.RetrofitInstance;
-import com.hanzu.ketik.service.GetResultDataService;
-import com.hanzu.ketik.service.InsertResponse;
 
 import java.util.Calendar;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-public class InsertActivity extends AppCompatActivity {
+public class InsertHarian extends AppCompatActivity {
 
     private DatePickerDialog datePickerDialog;
     private Button dateButton, save;
-    CheckBox cb1, cb2, cb3, cb4, cb5, cb6, cb7, cb8 ;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_insert);
+        setContentView(R.layout.activity_insert_harian);
 
         initDatePicker();
-
         dateButton = findViewById(R.id.DatePickerButton);
         dateButton.setText(getTodaysdate());
-        save = (Button) findViewById(R.id.btn_save);
-        cb1 =  findViewById(R.id.cb_1);
-        cb2 =  findViewById(R.id.cb_2);
-        cb3 =  findViewById(R.id.cb_3);
-        cb4 =  findViewById(R.id.cb_4);
-        cb5 =  findViewById(R.id.cb_5);
-        cb6 =  findViewById(R.id.cb_6);
-        cb7 =  findViewById(R.id.cb_7);
-        cb8 =  findViewById(R.id.cb_8);
+        save = findViewById(R.id.btn_save_harian);
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isChecked = cb1.isChecked(); cb2.isChecked(); cb3.isChecked(); cb4.isChecked();
-                                    cb5.isChecked(); cb6.isChecked(); cb7.isChecked(); cb8.isChecked();
-                    Intent intent = new Intent(InsertActivity.this, MenuKamar.class);
-                    startActivity(intent);
-//
-//                if (isChecked){
-//
-//                }else {
-//
-//                }
-                boolean krit1 = cb1.isChecked();
-                boolean krit2 = cb2.isChecked();
-                boolean krit3 = cb3.isChecked();
-                boolean krit4 = cb4.isChecked();
-                boolean krit5 = cb5.isChecked();
-                boolean krit6 = cb6.isChecked();
-                boolean krit7 = cb7.isChecked();
-                boolean krit8 = cb8.isChecked();
-
-                GetResultDataService service = RetrofitInstance.getRetrofit()
-                        .create(GetResultDataService.class);
-                Call<InsertResponse> call = service.input(krit1,krit2,krit3,krit4,krit5, krit6,krit7,krit8);
-
-                call.enqueue(new Callback<InsertResponse>() {
-                    @Override
-                    public void onResponse(Call<InsertResponse> call, Response<InsertResponse> response) {
-                        String message = response.body().getMessage();
-                        Toast.makeText(InsertActivity.this, ""+message, Toast.LENGTH_SHORT).show();
-
-                        Intent intent = new Intent(InsertActivity.this,MenuKamar.class);
-                        startActivity(intent);
-                        finish();
-                    }
-
-                    @Override
-                    public void onFailure(Call<InsertResponse> call, Throwable t) {
-
-                    }
-                });
+                Intent  intent = new Intent(InsertHarian.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
-
     private String getTodaysdate() {
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);

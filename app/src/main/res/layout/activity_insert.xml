@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="@color/white"
     tools:context=".InsertActivity">
 
     <RelativeLayout
@@ -120,8 +121,6 @@
             android:onClick="onClick"
             android:text="Simpan"
             android:textAllCaps="false" />
-
-
     </RelativeLayout>
 
 </LinearLayout>

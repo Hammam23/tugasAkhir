@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".InsertHarian">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/DatePickerButton"
+            style="?android:spinnerStyle"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:onClick="openDatePicker"
+            android:text="JAN 01 2024"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="35dp"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/box1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@id/DatePickerButton"
+            android:layout_marginRight="30dp">
+
+            <EditText
+                android:id="@+id/harian1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kebersihan"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/box2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/box1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+            <EditText
+                android:id="@+id/harian2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kerapihan"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/box3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/box2"
+            android:layout_marginRight="30dp">
+
+            <EditText
+                android:id="@+id/harian3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tidak ada sampah"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/box4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@id/box3"
+            android:layout_marginRight="30dp">
+
+            <EditText
+                android:id="@+id/harian4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sesuai dengan standar"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/box4"
+            android:layout_marginTop="15dp"
+            android:background="@color/petik"
+            android:layout_marginLeft="140dp"
+            android:onClick="onClick"
+            android:text="Simpan"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+</LinearLayout>

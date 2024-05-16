@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/home_menu"
+        android:title="Beranda"
+        android:icon="@drawable/beranda"/>
+
+    <item
+        android:id="@+id/history_menu"
+        android:title="Rekap"
+        android:icon="@drawable/history"/>
 </menu>

@@ -41,23 +41,30 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/judul"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/main2"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/petik"
-        android:text="Absensi Kebersihan Harian"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"/>
+        android:layout_below="@id/main2">
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/petik"
+            android:text="Absensi Kebersihan Harian"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"/>
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/btn_harian"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/judul"
+        android:layout_below="@id/ll2"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="140dp"
