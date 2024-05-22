@@ -21,7 +21,7 @@ public class Login extends AppCompatActivity {
     private static final String TAG = "Login";
     private static final int REQUEST_SIGNUP = 0;
 
-    private Button btnlogin;
+    private Button btnLogin;
     private EditText username, password;
 
     SharedPreference sharedPreference;
@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity {
 
         username = (EditText) findViewById(R.id.txt_user);
         password = (EditText) findViewById(R.id.txt_password);
-        btnlogin = (Button) findViewById(R.id.btn_login);
+        btnLogin = (Button) findViewById(R.id.btn_login);
 
         sharedPreference = new SharedPreference();
 
@@ -46,7 +46,7 @@ public class Login extends AppCompatActivity {
             finish();
         }
 
-        btnlogin.setOnClickListener(new View.OnClickListener() {
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 login();
@@ -62,7 +62,7 @@ public class Login extends AppCompatActivity {
             return;
         }
 
-        btnlogin.setEnabled(false);
+        btnLogin.setEnabled(false);
 
         final ProgressDialog progressDialog =
                 new ProgressDialog(Login.this);
@@ -91,12 +91,12 @@ public class Login extends AppCompatActivity {
     public void onLoginSucces(){
         Intent intent = new Intent(context, MainActivity.class);
         startActivity(intent);
-        btnlogin.setEnabled(true);
+        btnLogin.setEnabled(true);
         finish();
     }
     public void  onLoginFailed(){
         Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show();
-        btnlogin.setEnabled(true);
+        btnLogin.setEnabled(true);
     }
     public boolean validate(){
         boolean valid = true;

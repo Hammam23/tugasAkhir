@@ -9,13 +9,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.hanzu.ketik.retrofit.RetrofitInstance;
+import com.hanzu.ketik.service.GetResultDataService;
+import com.hanzu.ketik.service.InsertResponse;
 
 import java.util.Calendar;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class InsertHarian extends AppCompatActivity {
 
     private DatePickerDialog datePickerDialog;
     private Button dateButton, save;
+
+    EditText harian1, harian2, harian3, harian4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,12 +37,42 @@ public class InsertHarian extends AppCompatActivity {
         dateButton = findViewById(R.id.DatePickerButton);
         dateButton.setText(getTodaysdate());
         save = findViewById(R.id.btn_save_harian);
+        harian1 = findViewById(R.id.harian1);
+        harian2 = findViewById(R.id.harian2);
+        harian3 = findViewById(R.id.harian3);
+        harian4 = findViewById(R.id.harian4);
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent  intent = new Intent(InsertHarian.this, MainActivity.class);
+                Intent  intent = new Intent(InsertHarian.this, MenuHarian.class);
                 startActivity(intent);
+
+                String krit1 = harian1.getText().toString();
+                String krit2 = harian2.getText().toString();
+                String krit3 = harian3.getText().toString();
+                String krit4 = harian4.getText().toString();
+
+                GetResultDataService service = RetrofitInstance.getRetrofit()
+                        .create(GetResultDataService.class);
+                Call<InsertResponse> call = service.input(krit1,krit2,krit3,krit4);
+
+                call.enqueue(new Callback<InsertResponse>() {
+                    @Override
+                    public void onResponse(Call<InsertResponse> call, Response<InsertResponse> response) {
+                        String message = response.body().getMessage();
+                        Toast.makeText(InsertHarian.this, ""+message, Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(InsertHarian.this,MenuKamar.class);
+                        startActivity(intent);
+                        finish();
+                    }
+
+                    @Override
+                    public void onFailure(Call<InsertResponse> call, Throwable t) {
+
+                    }
+                });
             }
         });
     }

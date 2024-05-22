@@ -13,12 +13,19 @@ public interface GetResultDataService {
 
     @FormUrlEncoded
     @POST("kriteria")
-    Call<InsertResponse> input(@Field("krit1")boolean krit1,
-                               @Field("krit2")boolean krit2,
-                               @Field("krit3")boolean krit3,
-                               @Field("krit4")boolean krit4,
-                               @Field("krit5")boolean krit5,
-                               @Field("krit6")boolean krit6,
-                               @Field("krit7")boolean krit7,
-                               @Field("krit8")boolean krit8);
+    Call<InsertResponse> input(@Field("krit1")String krit1,
+                               @Field("krit2")String krit2,
+                               @Field("krit3")String krit3,
+                               @Field("krit4")String krit4,
+                               @Field("krit5")String krit5,
+                               @Field("krit6")String krit6,
+                               @Field("krit7")String krit7,
+                               @Field("krit8")String krit8);
+
+    @FormUrlEncoded
+    @POST("kriteria")
+    Call<InsertResponse> input(@Field("krit1")String krit1,
+                               @Field("krit2")String krit2,
+                               @Field("krit3")String krit3,
+                               @Field("krit4")String krit4);
 }

@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.hanzu.ketik.retrofit.RetrofitInstance;
@@ -27,7 +28,7 @@ public class InsertActivity extends AppCompatActivity {
 
     private DatePickerDialog datePickerDialog;
     private Button dateButton, save;
-    CheckBox cb1, cb2, cb3, cb4, cb5, cb6, cb7, cb8 ;
+    EditText cb1, cb2, cb3, cb4, cb5, cb6, cb7, cb8 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,36 +40,29 @@ public class InsertActivity extends AppCompatActivity {
         dateButton = findViewById(R.id.DatePickerButton);
         dateButton.setText(getTodaysdate());
         save = (Button) findViewById(R.id.btn_save);
-        cb1 =  findViewById(R.id.cb_1);
-        cb2 =  findViewById(R.id.cb_2);
-        cb3 =  findViewById(R.id.cb_3);
-        cb4 =  findViewById(R.id.cb_4);
-        cb5 =  findViewById(R.id.cb_5);
-        cb6 =  findViewById(R.id.cb_6);
-        cb7 =  findViewById(R.id.cb_7);
-        cb8 =  findViewById(R.id.cb_8);
+        cb1 =  findViewById(R.id.kmr1);
+        cb2 =  findViewById(R.id.kmr2);
+        cb3 =  findViewById(R.id.kmr3);
+        cb4 =  findViewById(R.id.kmr4);
+        cb5 =  findViewById(R.id.kmr5);
+        cb6 =  findViewById(R.id.kmr6);
+        cb7 =  findViewById(R.id.kmr7);
+        cb8 =  findViewById(R.id.kmr8);
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isChecked = cb1.isChecked(); cb2.isChecked(); cb3.isChecked(); cb4.isChecked();
-                                    cb5.isChecked(); cb6.isChecked(); cb7.isChecked(); cb8.isChecked();
                     Intent intent = new Intent(InsertActivity.this, MenuKamar.class);
                     startActivity(intent);
-//
-//                if (isChecked){
-//
-//                }else {
-//
-//                }
-                boolean krit1 = cb1.isChecked();
-                boolean krit2 = cb2.isChecked();
-                boolean krit3 = cb3.isChecked();
-                boolean krit4 = cb4.isChecked();
-                boolean krit5 = cb5.isChecked();
-                boolean krit6 = cb6.isChecked();
-                boolean krit7 = cb7.isChecked();
-                boolean krit8 = cb8.isChecked();
+
+                String krit1 = cb1.getText().toString();
+                String krit2 = cb2.getText().toString();
+                String krit3 = cb3.getText().toString();
+                String krit4 = cb4.getText().toString();
+                String krit5 = cb5.getText().toString();
+                String krit6 = cb6.getText().toString();
+                String krit7 = cb7.getText().toString();
+                String krit8 = cb8.getText().toString();
 
                 GetResultDataService service = RetrofitInstance.getRetrofit()
                         .create(GetResultDataService.class);

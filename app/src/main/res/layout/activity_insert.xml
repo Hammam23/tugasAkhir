@@ -11,9 +11,16 @@
     <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_gravity="center">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Isi Dengan 0 atau 1"
+            android:layout_below="@id/DatePickerButton"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="5dp"/>
         <Button
             android:id="@+id/DatePickerButton"
             style="?android:spinnerStyle"
@@ -29,86 +36,220 @@
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteY="16dp" />
 
-
-        <CheckBox
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/cb_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/DatePickerButton"
             android:layout_marginTop="15dp"
-            android:minHeight="48dp"
-            android:checked="false"
-            android:text="Lantai bersih dan tidak berdebu" />
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@id/DatePickerButton"
+            android:layout_marginRight="30dp">
 
-        <CheckBox
+        <EditText
+            android:id="@+id/kmr1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lantai bersih dan tidak berdebu"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/cb_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
             android:layout_below="@id/cb_1"
-            android:minHeight="48dp"
-            android:checked="false"
-            android:text="Tidak ada pakaian dan handuk\n diatas kasur" />
+            android:layout_marginRight="30dp">
 
-        <CheckBox
+            <EditText
+                android:id="@+id/kmr2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kebersihan"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/cb_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
             android:layout_below="@id/cb_2"
-            android:minHeight="48dp"
-            android:checked="false"
-            android:text="Jendela dan pintu bersih dan\n tidak berdebu" />
+            android:layout_marginRight="30dp">
 
-        <CheckBox
+            <EditText
+                android:id="@+id/kmr3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kebersihan"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/cb_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
             android:layout_below="@id/cb_3"
-            android:minHeight="48dp"
-            android:checked="false"
-            android:text="Kamar dalam keadaan rapi dan bersih" />
+            android:layout_marginRight="30dp">
 
-        <CheckBox
+            <EditText
+                android:id="@+id/kmr4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kebersihan"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/cb_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
             android:layout_below="@id/cb_4"
-            android:minHeight="48dp"
-            android:checked="false"
-            android:text="Tidak ada kasur disimpan dibawah" />
+            android:layout_marginRight="30dp">
 
-        <CheckBox
+            <EditText
+                android:id="@+id/kmr5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kebersihan"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/cb_6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
             android:layout_below="@id/cb_5"
-            android:minHeight="48dp"
-            android:checked="false"
-            android:text="Alat makan dan mandi disimpan\n pada tempatnya" />
+            android:layout_marginRight="30dp">
 
-        <CheckBox
+            <EditText
+                android:id="@+id/kmr6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kebersihan"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/cb_7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
             android:layout_below="@id/cb_6"
-            android:minHeight="48dp"
-            android:checked="false"
-            android:text="Pakaian tidak bergantungan\n sembarangan" />
+            android:layout_marginRight="30dp">
 
-        <CheckBox
+            <EditText
+                android:id="@+id/kmr7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kebersihan"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/cb_8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
             android:layout_below="@id/cb_7"
-            android:minHeight="48dp"
-            android:checked="false"
-            android:text="Toilet kamar bersih tidak berlumut" />
+            android:layout_marginRight="30dp">
+
+            <EditText
+                android:id="@+id/kmr8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kebersihan"/>
+        </com.google.android.material.textfield.TextInputLayout>
+<!--        <CheckBox-->
+<!--            android:id="@+id/cb_1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/DatePickerButton"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:checked="false"-->
+<!--            android:text="Lantai bersih dan tidak berdebu" />-->
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/cb_2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_below="@id/cb_1"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:checked="false"-->
+<!--            android:text="Tidak ada pakaian dan handuk\n diatas kasur" />-->
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/cb_3"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_below="@id/cb_2"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:checked="false"-->
+<!--            android:text="Jendela dan pintu bersih dan\n tidak berdebu" />-->
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/cb_4"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_below="@id/cb_3"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:checked="false"-->
+<!--            android:text="Kamar dalam keadaan rapi dan bersih" />-->
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/cb_5"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_below="@id/cb_4"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:checked="false"-->
+<!--            android:text="Tidak ada kasur disimpan dibawah" />-->
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/cb_6"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_below="@id/cb_5"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:checked="false"-->
+<!--            android:text="Alat makan dan mandi disimpan\n pada tempatnya" />-->
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/cb_7"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_below="@id/cb_6"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:checked="false"-->
+<!--            android:text="Pakaian tidak bergantungan\n sembarangan" />-->
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/cb_8"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_below="@id/cb_7"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:checked="false"-->
+<!--            android:text="Toilet kamar bersih tidak berlumut" />-->
 
         <Button
             android:id="@+id/btn_save"

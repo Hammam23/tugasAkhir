@@ -2,17 +2,21 @@ package com.hanzu.ketik;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     ImageView imageKamar, imageHarian;
-    LinearLayout layout3;
-//    private int intLayout;
+//    private TextView txtNama;
+//    private String textSharedPreference;
+//    private SharedPreference sharedPreference;
+//    Activity context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
 
         imageKamar = (ImageView) findViewById(R.id.img_kamar);
         imageHarian = (ImageView) findViewById(R.id.img_harian);
+//        textSharedPreference = sharedPreference.getValue(context);
+//        txtNama = (TextView) findViewById(R.id.txt_name);
+//        txtNama.setText(textSharedPreference);
+//
+//        sharedPreference = new SharedPreference();
 
         imageKamar.setOnClickListener(new View.OnClickListener() {
             @Override
